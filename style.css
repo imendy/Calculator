@@ -1,4 +1,6 @@
- *, *::before, *::after {
+ *,
+*::before, 
+*::after {
 
   box-sizing: border-box;
   font-family: sans-serif;
@@ -58,39 +60,3 @@ body {
   color: white;
   font-size: 2.5rem;
 }
-
-/* #display {
-  border-radius: 0.5rem;
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-around;
-  flex-direction: column;
-  padding: 10px;
-  margin: 10px 0; 
-  background-color: red;
-  word-wrap: break-word;
-  word-break: break-all;
-}
- #display .previous__operand {
-  
-  font-size: 1.5rem;
-  margin: 5px 0px;
-  box-shadow: none;
-  color: rgba(255, 255, 255, 0.75);
-
-}
- #display .current__operand {
-  font-size: 2.5rem;
-  margin: 5px 0px;
-  box-shadow: none;
-  color: white;
-}
-.equal {
-  width: 125px;
-}
-.highlight {
-  color: limegreen;
-}
-.highlight:hover {
-  color: limegreen;
-}*/
