@@ -124,3 +124,19 @@ deleteButton.addEventListener('click', button => {
   calculator.delete()
   calculator.updateDisplay()
 })
+
+
+const switchMode = document.getElementById("switch");
+const Inner_Text = document.getElementById("inner__text");
+
+mode.onclick = function() {
+  document.body.classList.toggle("dark-mode");
+  switchMode.classList.toggle("switch-active");
+  Inner_Text.classList.toggle("inner__text-active");
+  if (document.body.classList.contains("dark-mode")) {
+    Inner_Text.innerHTML = "Light";
+  }
+  else {
+    Inner_Text.innerHTML = "Dark";
+  }
+}

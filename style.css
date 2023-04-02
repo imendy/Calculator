@@ -5,12 +5,33 @@
   box-sizing: border-box;
   font-family: sans-serif;
 }
+:root {
+ --main-color:  #8ad6c9;
+  --primary-color:  #edf2fc;
+  --secondary-color: #212121;
+  --hover: #3a4452;
+  --previous: rgba(255, 255, 255, 0.75);
+  --prime-color:  #097402;
+  --alt-color:  #57badb;
+}
+.dark-mode {
+ --main-color: #212121;   
+  --primary-color: #742001;
+  --secondary-color:  #8ad6c9;
+  --previous: #8ad6c9;
+  --hover:  #742001;
+  --prime-color: #212121;
+  --alt-color: #212121;
+}
+
 body {
   margin: 0;
   padding: 0;
-  background:  #8ad6c9;
+  background:  var(--main-color);
   font-weight: bold;
+  transition: background 0.5s;
 }
+
 
 .calculator {
   display: grid;
@@ -18,31 +39,69 @@ body {
   align-content: center;
    grid-template-columns: repeat(4, 80px);
   grid-template-rows: minmax(80px, auto) repeat(5, 80px);
-  min-height: 110vh;
+  min-height: 100vh;
+  
 
 }
+#mode {
+  height: 25px;
+  background-color: var(--secondary-color);
+  border-radius: 15px;
+  width: 70px;
+  display: flex;
+  align-items: center;
+  margin-left: 20rem;
+  position: relative;
+  margin-top: 3rem;
+}
+
+#switch {
+  height: 21px;
+  width: 21px;
+  border-radius: 50%;
+  margin: 2px 2px;
+  background-color: var(--primary-color);
+  
+}
+
+.switch-active {
+  transform: translateX(50px);
+}
+
+#inner__text {
+  color: var(--primary-color);
+  font-size: 1rem;
+  position: absolute;
+  right: 10px;
+}
+
+.inner__text-active {
+  transform: translateX(-24px);
+}
+
 .calculator button {
-  border: 1px solid white;
+  border: 1px solid var(--primary-color);
   outline: 0;
   box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.1),5px 5px 15px rgba(0, 0, 0, 0.2);
   background: transparent;
   font-size: 2rem;
   margin: 0;
   padding: 0;
-  color: #fff;
+  color: var(--primary-color);
   cursor: pointer;
   border-radius: 10px;
+  transition: background 0.4s;
 }
 .calculator button:hover {
-  background: rgba(255, 255, 255, 0.9);
-  color: #3a4452;
+  background: var(--hover);
+  color: var(--prime-color);
 }
 .span-two {
   grid-column: span 2;
 }
 #display {
   grid-column: 1 / -1;
-  background: #3a4452;
+  background: var(--hover);
   display: flex;
   align-items: flex-end;
   justify-content: space-around;
@@ -53,10 +112,10 @@ body {
   border-radius: 10px;
 }
 .previous__operand {
-  color: rgba(255, 255, 255, 0.75);
+  color: var(--previous);
   font-size: 1.5rem;
 }
 .current__operand {
-  color: white;
+  color: var(--alt-color);
   font-size: 2.5rem;
 }
