@@ -29,7 +29,7 @@ body {
   padding: 0;
   background:  var(--main-color);
   font-weight: bold;
-  transition: background 0.5s;
+  
 }
 
 
@@ -44,20 +44,19 @@ body {
 
 }
 #mode {
-  height: 25px;
+  height: 30px;
   background-color: var(--secondary-color);
   border-radius: 15px;
-  width: 70px;
+  width: 80px;
   display: flex;
   align-items: center;
-  margin-left: 20rem;
   position: relative;
-  margin-top: 3rem;
+  margin-top: 2rem;
 }
 
 #switch {
-  height: 21px;
-  width: 21px;
+  height: 26px;
+  width: 26px;
   border-radius: 50%;
   margin: 2px 2px;
   background-color: var(--primary-color);
@@ -90,7 +89,7 @@ body {
   color: var(--primary-color);
   cursor: pointer;
   border-radius: 10px;
-  transition: background 0.4s;
+  transition: background 0.5s;
 }
 .calculator button:hover {
   background: var(--hover);
